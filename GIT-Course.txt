@@ -1,0 +1,104 @@
+
+github pull requests
+
+https://help.github.com/articles/creating-a-pull-request/
+
+Creating git repos-
+
+1. git init-  creates a blank repo
+
+2. Create repo from existing project- issue git init command to existing project
+
+3. cloning remote repo- clone from github to local machine
+
+how to set up name and email address?
+
+the file to do this is - .gitconfig
+
+git config --global user.name "asmaldone"
+git config --global user.email "asmaldone@nydailynews.com"
+
+
+to see the config list
+$ git config --global --list
+user.email=asmaldone@nydailynews.com
+user.name=asmaldone
+credential.helper=manager
+core.autocrlf=true
+
+
+config files-
+
+1. system- ./etc/.gitconfig- rarely used
+
+
+2. global- configuration is applied for a single user .gitconfig - this file can be used to overwrite configurationvalues set to system configuration file.
+
+3. Local configuration- applies to single repo. This file is located at .git/config. Can overwrite system or global. if this file is 
+committed then settings would impact all users that clone repository.
+
+git windows set up
+
+curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+
+. ~/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
+commit/add shortcut command
+
+git commit -a -m "message"
+
+Reverting content-
+git checkout -- sortedCollections.iml
+
+
+remove from stage
+git reset HEAD sortedCollections.iml
+
+view history-
+git log
+git log --oneline
+ git log -n 3 -- last three
+ 
+  git log --oneline --decorate
+
+ 
+ 
+ BRANCHING-
+ git branch
+ git branch -l
+ 
+ create a branch
+ git branch  login-feature
+ 
+ switch to branch
+ git checkout login-feature
+ 
+ merge
+ git merge login-feature
+ 
+ 
+ delete branch
+ git branch -d login-feature
+ 
+ 
+ github
+ …or create a new repository on the command line
+echo "# git-bootcamp" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/allen244/git-bootcamp.git
+git push -u origin master
+…or push an existing repository from the command line
+git remote add origin https://github.com/allen244/git-bootcamp.git
+git push -u origin master
+
+ 
+ 
+ 
+ 
+ 
+ 
+
